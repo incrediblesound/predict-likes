@@ -51,7 +51,7 @@ predict.processArray([john,mary], function(results) {
 ```
 from these results it is clear that john likes calligraphy that shows strength, whereas mary is drawn to calligraphy that lacks balance.
 
-The last method is predictLike, which takes a person, a list of qualities, an optional threshold and a callback.The algorithm returns all the qualities which occur in the given persons likes at a percentage higher than the threshold, and the threshold defaults to 50 if not given.
+The last method is predictLike, which takes a person, a list of qualities, an optional threshold and a callback. The algorithm returns all the qualities which occur in the given persons likes at a percentage higher than the threshold, and the threshold defaults to 50 if not given.
 
 ```javascript
 
@@ -60,10 +60,7 @@ var mao = ['fluidity','elegance'];
 factor.predictLike(mary, mao, function(result) {
     console.log(result);
 })
-//=>{ result: true,
-  matches: 
-   [ { match: 'fluidity', certainty: 66 },
-     { match: 'elegance', certainty: 66 } ] }
+//=>{ result: true, matches: [ { match: 'fluidity', certainty: 66 }, { match: 'elegance', certainty: 66 } ] }
 ```
 
 Here we see that Mary might like Mao's calligraphy given that 66% percent of the calligraphers she likes have the qualities 'fluidity' and 'elegance', both of which are characteristic of Mao's.

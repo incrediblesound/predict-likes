@@ -1,6 +1,6 @@
 {
     "name": "predict-likes",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Predict likes based on a library of attributes",
     "main": "main.js",
     "author": "James H. Edwards",

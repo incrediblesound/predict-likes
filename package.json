@@ -1,10 +1,10 @@
 {
     "name": "predict-likes",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description": "Predict likes based on a library of attributes",
     "main": "main.js",
     "author": "James H. Edwards",
-    "keywords": ["prediction","likes","probability"],
+    "keywords": ["prediction","likes","probability","recommender","content-based"],
     "repository" : {
         "type": "git",
         "url": "https://github.com/incrediblesound/predict-likes"

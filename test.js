@@ -1,18 +1,19 @@
 var factor = require('./main.js');
+var control = factor.control();
 
-var qualities = ['strength','balance','elegance','fluidity'];
+var qualities = ['strength','balance','elegance','fluidity','influence','individuality','creativity'];
 
 var calligraphers = {
-	yan:['strength','balance'],
-	wang:['elegance','balance','fluidity','strength'],
-	su:['strength','balance','fluidity'],
-	mi:['fluidity','elegance'],
-	huang:['strength','elegance']
+	yan:['strength','balance','influence'],
+	wang:['elegance','balance','fluidity','creativity','influence'],
+	su:['strength','balance','fluidity', 'influence'],
+	mi:['fluidity','elegance','creativity','individuality'],
+	huang:['strength','elegance','creativity','individuality']
 };
 
-var mao = ['fluidity','elegance'];
+var mao = ['fluidity','elegance','individuality'];
 
-var john = {id: 'john', likes: ['yan','su','huang']};
+var james = {id: 'James', likes: ['yan','su','huang']};
 var mary = {id: 'mary', likes: ['mi','su', 'huang','mao']};
 
 factor.setObject(calligraphers);
@@ -21,11 +22,17 @@ factor.addObject('mao',['fluidity','elegance']);
 
 factor.setQualities(qualities);
 
-factor.processArray([john,mary], function(result) {
-	console.log(result);
-});
+control.getTermFrequency(function(tf) {
+	control.setTermFrequency(tf);
+})
 
-//factor.predictLike(mary, mao, function(result) {
-//	console.log(result);
-//})
+//factor.useControl(true);
+
+//factor.processArray([james,mary], function(result) {
+	//console.log(result);
+//});
+
+factor.predictLike(mary, mao, function(result) {
+	console.log(result);
+})
 
